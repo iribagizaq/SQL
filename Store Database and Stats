@@ -1,0 +1,24 @@
+-- Design a store database 
+
+CREATE TABLE store( id integer primary key , name text,section integer, quantity integer, price integer);
+
+insert into store values ( 1,"shirts",1,80,19.99); 
+insert into  store values  ( 2, "pants",2,60, 16);
+insert into store values ( 3, "skirt",3,70,10.99 );
+insert into store values ( 4, "hats",4,20,5.99 );
+insert into store values ( 5, "scarfs",5,90,4.99);
+insert into store values (6, "tops",6,10,9.99);
+insert into store values (7, "sun glasses",7,20,2.99);
+insert into store values (8, "watches",8,50,15);
+insert into store values (9,"polos",9,40,21.99);
+insert into store values (10, "tote bags",10,35,30);
+insert into store values (11, "belts",11,60,7.99);
+insert into store values (12,"socks",12,100,3.99);
+insert into store values (13, "jacket",13,65,28.99);
+insert into store values (14,"shoes", 14,75,40);
+insert into store values (15,"dress",15,80,35.99);
+
+-- Order items by price
+SELECT * FROM store ORDER BY price DESC;
+-- Summ of all quantities
+select sum(quantity) from store order by price desc;
